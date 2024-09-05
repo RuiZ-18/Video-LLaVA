@@ -8,3 +8,7 @@ CUDA Setup failed despite GPU being available. Please run the following command 
         and open an issue at: https://github.com/TimDettmers/bitsandbytes/issues
 
 change the version of bitsandbytes to from 0.39.0 to 0.41.0
+
+
+# 对cache_dir中的文件做软链接，使得和下载的结构相同
+ln -s ../../blobs/0d6332792bdd18d4bed8b991b763724ce021acff config.json
