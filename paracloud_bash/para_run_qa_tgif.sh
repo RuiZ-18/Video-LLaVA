@@ -1,3 +1,4 @@
+#!/bin/bash
 module load anaconda/2020.11
 source activate videollava
 export PYTHONUNBUFFERED=1
