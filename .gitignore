@@ -5,4 +5,6 @@
 /videollava.egg-info
 /checkpoints
 /pyproject.toml
+# delete all files startwith slurm
+/slurm*
 
