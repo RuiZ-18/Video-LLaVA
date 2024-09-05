@@ -2,6 +2,7 @@
 module load anaconda/2020.11
 source activate videollava
 export PYTHONUNBUFFERED=1
+export HF_ENDPOINT=https://hf-mirror.com
 
 
 CKPT_NAME="Video-LLaVA-7B"
