@@ -2,3 +2,5 @@
 /eval
 /cache_dir
 /.idea
+/pyproject.toml
+/videollava.egg-info
