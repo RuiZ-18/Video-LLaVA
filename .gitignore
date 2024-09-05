@@ -3,6 +3,6 @@
 /cache_dir
 /.idea
 /videollava.egg-info
-
+/checkpoints
 /pyproject.toml
 
