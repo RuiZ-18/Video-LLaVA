@@ -8,3 +8,4 @@
 # delete all files startwith slurm
 /slurm*
 
+__pycache__
