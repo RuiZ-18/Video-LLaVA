@@ -8,8 +8,8 @@ export HF_ENDPOINT=https://hf-mirror.com
 
 
 JSON_FOLDER="llava_all_image_video/pt_json"
-IMAGE_FOLDER="llava_all_image_video"
-VIDEO_FOLDER="llava_all_image_video"
+IMAGE_FOLDER="llava_all_image_video/llava_iamge_.json"
+VIDEO_FOLDER="llava_all_image_video/valley_.json"
 
 cd /path/to/Video-LLaVA
 HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 deepspeed videollava/train/train_mem.py \
