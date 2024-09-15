@@ -1,21 +1,20 @@
 #!/bin/bash
 module load anaconda  compilers/cuda/12.1   cudnn/8.8.1.3_cuda12.x  compilers/gcc/12.2.0 llvm/triton-llvm_14.0.6
 export LD_PRELOAD=/home/bingxing2/apps/compilers/gcc/12.2.0/lib64/libstdc++.so
-export LD_PRELOAD=$LD_PRELOAD:/home/bingxing2/home/scx8ana/.conda/envs/videollava/lib/python3.10/site-packages/scikit_learn.libs/libgomp-d22c30c5.so.1.0.0
-
 source activate videollava
 export PYTHONUNBUFFERED=1 
 export HF_ENDPOINT=https://hf-mirror.com
 
 
+
 JSON_FOLDER="llava_all_image_video/pt_json"
-IMAGE_FOLDER="llava_all_image_video/llava_image"
+IMAGE_FOLDER="llava_all_image_video/llava_iamge"
 VIDEO_FOLDER="llava_all_image_video/valley"
 
-# cd /path/to/Video-LLaVA
+cd /path/to/Video-LLaVA
 HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 deepspeed videollava/train/train_mem.py \
     --deepspeed ./scripts/zero2.json \
-    --model_name_or_path ./checkpoints/vicuna-7b-v1.5 \
+    --model_name_or_path lmsys/vicuna-7b-v1.5 \
     --version v1 \
     --data_path ${JSON_FOLDER}/llava_image_.json ${JSON_FOLDER}/valley_.json \
     --image_folder ${IMAGE_FOLDER} \
