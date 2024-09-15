@@ -30,7 +30,7 @@ HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 deepspeed videollava/train/train_me
     --bf16 True \
     --output_dir ./checkpoints/videollava-7b-pretrain \
     --num_train_epochs 1 \
-    --per_device_train_batch_size 12 \
+    --per_device_train_batch_size 8 \
     --per_device_eval_batch_size 4 \
     --gradient_accumulation_steps 1 \
     --evaluation_strategy "no" \

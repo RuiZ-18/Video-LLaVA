@@ -15,3 +15,7 @@ ln -s ../../blobs/0d6332792bdd18d4bed8b991b763724ce021acff config.json
 
 # calculate disk quotas
 lfs quota -uh $USER ~
+
+
+jump notes with low driver: 
+sbatch -x paraai-n32-h-01-agent-[1,4,7-8,16-17] --gpus=1 paracloud_bash/train.sh 
