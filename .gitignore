@@ -16,4 +16,4 @@ __pycache__
 /local_bash
 /scikit_learn-1.5.2
 /slurm_out
-
+/z_slurmout
