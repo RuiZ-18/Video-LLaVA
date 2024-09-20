@@ -13,7 +13,7 @@ IMAGE_FOLDER="llava_all_image_video/llava_image"
 VIDEO_FOLDER="llava_all_image_video/valley"
 
 # cd /path/to/Video-LLaVA
-HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 deepspeed videollava/train/train_mem.py \
+HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 deepspeed --master_port=12345 videollava/train/train_mem.py \
     --deepspeed ./scripts/zero2.json \
     --model_name_or_path ./checkpoints/vicuna-7b-v1.5 \
     --version v1 \
@@ -30,7 +30,7 @@ HF_DATASETS_OFFLINE=1 TRANSFORMERS_OFFLINE=1 deepspeed videollava/train/train_me
     --bf16 True \
     --output_dir ./checkpoints/videollava-7b-pretrain \
     --num_train_epochs 1 \
-    --per_device_train_batch_size 8 \
+    --per_device_train_batch_size 4 \
     --per_device_eval_batch_size 4 \
     --gradient_accumulation_steps 1 \
     --evaluation_strategy "no" \

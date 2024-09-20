@@ -19,3 +19,7 @@ lfs quota -uh $USER ~
 
 jump notes with low driver: 
 sbatch -x paraai-n32-h-01-agent-[1,4,7-8,16-17] --gpus=1 paracloud_bash/train.sh 
+
+
+RuntimeError: The server socket has failed to listen on any local network address. The server socket has failed to bind to [::]:29500 (errno: 98 - Address already in use). The server socket has failed to bind to 0.0.0.0:29500 (errno: 98 - Address already in use).
+--master_port 12345
